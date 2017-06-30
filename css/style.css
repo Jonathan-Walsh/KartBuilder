@@ -9,7 +9,51 @@
   background-size: 100% 100%;
   height: 200px;
 }
+ .nav-list {
+ 	border-color: transparent;
+ 	background-color: transparent;
+ 	color: GhostWhite;
+ }
+
+.nav-list:hover {
+	background-image: none;
+	border-color: transparent;
+	background-color: transparent;
+ 	color: Black;
+}
+
+.nav-list:active {
+	border-color: transparent;
+	background-color: transparent;
+ 	color: Black;
+}
+
+ul.dropdown-menu li.active {
+	background-color: Yellow;
+	color: GhostWhite;
+}
 
 .stats {
+	text-align: center;
+}
+
+img {
+	display: block;
+	clear: right;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#charImg {
+	margin-top: 45px;
+}
+
+.header {
+	text-align: center;
+}
+
+td {
 	text-align: center;
 }

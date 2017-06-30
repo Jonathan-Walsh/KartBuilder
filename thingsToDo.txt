@@ -1,0 +1,5 @@
+THINGS TO DO:
+
+  - Reorganize the entire site
+  - Take away color from pressed down list button
+  - Change selected list item color to deepskyblue

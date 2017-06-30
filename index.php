@@ -16,20 +16,26 @@
     <div class="jumbotron" style = "background-color: DeepSkyBlue">
       <div class = "container text-center">
         <h1>Mario Kart 8 Deluxe: Kart Builder</h1>
+        <div class="btn-group pull-right">
+          <button type="button" class="btn-lg btn-default dropdown-toggle nav-list" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-list"></span><span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li class="active"><a href="index.php">Kart Builder</a></li>
+            <li><a href="statTables.php">Stat Tables</a></li>
+          </ul>
+        </div>  
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-offset col-md-2">
+        <div class="offset-col-md col-md-2">
           <h3 class="text-center">Character</h3>
           <select class="form-control" id="characters" onchange="getStats()">
             <?php
               $characters = $connection->query("SELECT name FROM characters");
-              $i = 0;
-              while ($row = $characters->fetch_assoc()) {
-                $i++;
-                echo "<option value=\"" . $i . "\">" . $row['name'] . "</option>";
-              }
+              while ($row = $characters->fetch_assoc())
+                echo "<option>" . $row['name'] . "</option>";
             ?>
             </select>
             <h3 class="text-center">Body</h3>
@@ -40,8 +46,6 @@
                 echo "<option>" . $row['name'] . "</option>";
             ?>
           </select>
-        </div>
-        <div class="col-md-2">
           <h3 class="text-center">Tires</h3>
           <select class="form-control" id="tires" onchange="getStats()">
           <?php
@@ -58,6 +62,12 @@
                 echo "<option>" . $row['name'] . "</option>";
             ?>
           </select>  
+        </div>
+        <div class="col-md-2">
+          <img src="" id="charImg" height="50px" width="50px">
+          <img src="" id="bodyImg" height="50px" width="50px">
+          <img src="" id="tiresImg" height="50px" width="50px">
+          <img src="" id="gliderImg" height="50px" width="50px">
         </div>
         <div class="col-md-offset-4 col-md-2">
           <h3>Stats</h3>

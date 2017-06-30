@@ -26,5 +26,4 @@
   function GetSumOfValues($column, $name, $connection) {
     $connection->query("SELECT " . $column);
   }
-
 ?>
