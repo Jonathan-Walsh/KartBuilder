@@ -2,4 +2,4 @@ THINGS TO DO:
 
   - Reorganize the entire site
   - Take away color from pressed down list button
-  - Change selected list item color to deepskyblue
+  - Change selected list item color to deepskyblue for nav list and nav pills

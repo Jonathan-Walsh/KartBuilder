@@ -118,3 +118,27 @@ function changeSpeedAndHandlingText() {
 		$("#handlingGround").html($handlingText);
 	}
 }
+
+$('ul.nav.nav-pills li a').click(function() {           
+    $(this).parent().addClass('active').siblings().removeClass('active');
+    hideAllTables();
+    showCorrectTable($(this).html());
+});
+
+function hideAllTables() {
+	$(".characterStatsTable").hide();
+    $(".bodyStatsTable").hide(); 
+    $(".tiresStatsTable").hide();
+   	$(".gliderStatsTable").hide();
+}
+
+function showCorrectTable($table) {
+	if ($table === "Characters")
+		$(".characterStatsTable").show();
+	if ($table === "Bodies")
+    	$(".bodyStatsTable").show();
+    if ($table === "Tires") 
+    	$(".tiresStatsTable").show();
+	if ($table === "Gliders")	
+   		$(".gliderStatsTable").show();
+}

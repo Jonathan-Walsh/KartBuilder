@@ -29,7 +29,15 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md">
+        <ul class="nav nav-pills statTablePills">
+          <li class="active"><a href="#">Characters</a></li>
+          <li><a href="#">Bodies</a></li>
+          <li><a href="#">Tires</a></li>
+          <li><a href="#">Gliders</a></li>
+        </ul>
+      </div>
+      <div class="row">
+          <div class="characterStatsTable">
           <h3>Characters</h3>
           <table class="table table-bordered">
             <?php
@@ -56,6 +64,8 @@
               }
             ?>
           </table>
+          </div>
+          <div class="bodyStatsTable">
           <h3>Kart Bodies</h3>
           <table class="table table-bordered">
             <?php
@@ -75,6 +85,8 @@
               }
             ?>
           </table>
+          </div>
+          <div class="tiresStatsTable">
           <h3>Tires</h3>
           <table class="table table-bordered">
             <?php
@@ -94,6 +106,8 @@
               }
             ?>
           </table>
+          </div>
+          <div class="gliderStatsTable">
           <h3>Gliders</h3>
           <table class="table table-bordered">
             <?php
@@ -113,8 +127,8 @@
               }
             ?>
           </table>
+          <div>
         </div>
-      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
